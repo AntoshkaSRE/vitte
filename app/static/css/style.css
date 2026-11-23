@@ -160,6 +160,7 @@ details.faq summary { cursor: pointer; font-weight: 600; }
 .site-footer a { color: #fff; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 2fr; gap: 20px; }
 .footer-grid p { margin: .3em 0; }
+.site-footer .muted { color: #c3d0e4; }
 .copyright { border-top: 1px solid rgba(255,255,255,.2); margin-top: 16px; padding: 12px 16px; font-size: .85rem; opacity: .85; }
 
 /* ---------- адаптивность (планшеты и смартфоны) ---------- */
