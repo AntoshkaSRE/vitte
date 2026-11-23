@@ -12,6 +12,13 @@ def page(template: str, crumbs: list | None = None, **context):
     return render_template(template, crumbs=crumbs or [], **context)
 
 
+def safe_target(target: str | None, default: str) -> str:
+    """Допускает для перенаправления только внутренние адреса сайта (защита от open redirect)."""
+    if target and target.startswith("/") and not target.startswith("//") and "\\" not in target:
+        return target
+    return default
+
+
 def to_int(value, default=None):
     """Безопасно преобразует строку параметра запроса в число."""
     try:

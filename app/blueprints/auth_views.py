@@ -4,16 +4,14 @@ from werkzeug.security import check_password_hash
 
 from app.auth import audit
 from app.db import execute, query_one
-from app.helpers import page
+from app.helpers import page, safe_target
 
 bp = Blueprint("auth", __name__)
 
 
 def safe_next(target: str | None) -> str:
     """Допускает только внутренние адреса для перенаправления после входа."""
-    if target and target.startswith("/") and not target.startswith("//"):
-        return target
-    return url_for("cabinet.index")
+    return safe_target(target, url_for("cabinet.index"))
 
 
 @bp.route("/login", methods=["GET", "POST"])
