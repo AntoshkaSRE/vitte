@@ -94,6 +94,8 @@ def user_edit(user_id):
         password = request.form.get("password", "")
         if target["id"] == g.user["id"] and not active:
             errors.append("Нельзя заблокировать собственную учётную запись.")
+        if target["id"] == g.user["id"] and role_id != target["role_id"]:
+            errors.append("Нельзя изменить собственную роль: система должна сохранить администратора.")
         if len(full_name) < 5:
             errors.append("Укажите ФИО полностью.")
         if password and len(password) < 8:
