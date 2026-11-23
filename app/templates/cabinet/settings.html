@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Настройки{% endblock %}
+{% block content %}
+<h1>Личные настройки</h1>
+<div class="cabinet-layout">
+  {% include "cabinet/_menu.html" %}
+  <div class="card form-card">
+    {% set prefs = current_user.preferences or {} %}
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label for="period">Период по умолчанию</label>
+      <select id="period" name="period">
+        <option value="">Последний доступный</option>
+        {% for p in periods %}<option value="{{ p.id }}" {{ 'selected' if prefs.get('period') == p.id }}>{{ p.title }}</option>{% endfor %}
+      </select>
+      <label for="chart">Предпочтительный тип графика</label>
+      <select id="chart" name="chart">
+        {% for code, title in chart_types.items() %}<option value="{{ code }}" {{ 'selected' if prefs.get('chart') == code }}>{{ title }}</option>{% endfor %}
+      </select>
+      <label for="theme">Тема оформления</label>
+      <select id="theme" name="theme">
+        {% for code, title in themes.items() %}<option value="{{ code }}" {{ 'selected' if prefs.get('theme', 'light') == code }}>{{ title }}</option>{% endfor %}
+      </select>
+      <p><button class="btn" type="submit">Сохранить настройки</button></p>
+    </form>
+  </div>
+</div>
+{% endblock %}

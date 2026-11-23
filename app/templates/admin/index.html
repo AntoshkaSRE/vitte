@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Администрирование{% endblock %}
+{% block content %}
+<h1>Панель администратора</h1>
+{% include "admin/_nav.html" %}
+<div class="grid grid-4">
+  <div class="card stat"><div class="value">{{ counts.active_users }} / {{ counts.users }}</div><div class="label">активных / всего пользователей</div></div>
+  <div class="card stat"><div class="value">{{ counts.new_feedback }}</div><div class="label">новых обращений</div></div>
+  <div class="card stat"><div class="value">{{ counts.reports }}</div><div class="label">отчётов сформировано</div></div>
+  <div class="card stat"><div class="value">{{ counts.cache }}</div><div class="label">записей в кэше</div></div>
+</div>
+<div class="card">
+  <h3>Последняя синхронизация с 1С</h3>
+  {% if last_sync %}
+    <p>{{ last_sync.started_at|dt }} — статус:
+      <span class="badge {{ 'badge-ok' if last_sync.status == 'ok' else 'badge-no' }}">{{ last_sync.status }}</span>,
+      загружено записей: {{ last_sync.rows_loaded }}. {{ last_sync.message }}</p>
+  {% else %}<p>Синхронизация ещё не выполнялась.</p>{% endif %}
+</div>
+<h2>Последние события</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Время</th><th>Пользователь</th><th>Действие</th><th>Подробности</th></tr></thead>
+  <tbody>{% for e in events %}<tr><td>{{ e.created_at|dt }}</td><td>{{ e.login or '—' }}</td><td>{{ e.action }}</td><td>{{ e.details }}</td></tr>{% endfor %}</tbody>
+</table></div>
+{% endblock %}

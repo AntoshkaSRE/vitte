@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Управление показателями{% endblock %}
+{% block content %}
+<h1>Управление показателями</h1>
+{% include "admin/_nav.html" %}
+<div class="card">
+  <h3>Добавить показатель</h3>
+  <form method="post" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="action" value="add">
+    <div><label for="code">Код</label><input type="text" id="code" name="code" required></div>
+    <div><label for="name">Название</label><input type="text" id="name" name="name" required></div>
+    <div><label for="unit">Ед. изм.</label><input type="text" id="unit" name="unit" value="чел."></div>
+    <div><label for="category">Категория</label><input type="text" id="category" name="category" value="Прочее"></div>
+    <div style="flex:0 0 auto"><button class="btn" type="submit">Добавить</button></div>
+  </form>
+</div>
+<div class="table-wrap"><table>
+  <thead><tr><th>Код</th><th>Название</th><th>Ед.</th><th>Категория</th><th>Открытый доступ</th></tr></thead>
+  <tbody>
+    {% for i in rows %}
+      <tr><td><code>{{ i.code }}</code></td><td>{{ i.name }}</td><td>{{ i.unit }}</td><td>{{ i.category }}</td>
+          <td><form class="inline" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="action" value="toggle"><input type="hidden" name="id" value="{{ i.id }}">
+            <button class="btn btn-small {{ 'btn-primary' if i.is_public }}" type="submit">{{ 'Да — скрыть' if i.is_public else 'Нет — открыть' }}</button></form></td></tr>
+    {% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}

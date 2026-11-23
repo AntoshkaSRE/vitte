@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Обращения{% endblock %}
+{% block content %}
+<h1>Обращения пользователей</h1>
+{% include "admin/_nav.html" %}
+{% for m in rows %}
+  <article class="card">
+    <h3>{{ m.subject }} {% if not m.is_processed %}<span class="badge badge-no">новое</span>{% else %}<span class="badge badge-ok">обработано</span>{% endif %}</h3>
+    <p class="muted">{{ m.name }} · {{ m.email }} · {{ m.created_at|dt }}</p>
+    <p>{{ m.message }}</p>
+    {% if not m.is_processed %}
+      <form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="id" value="{{ m.id }}">
+        <button class="btn btn-small" type="submit">Отметить обработанным</button></form>
+    {% endif %}
+  </article>
+{% else %}<p>Обращений нет.</p>{% endfor %}
+{% endblock %}

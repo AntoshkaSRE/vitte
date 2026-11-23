@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Отчёты{% endblock %}
+{% block content %}
+<h1>Формирование отчёта</h1>
+<div class="card form-card">
+  <form method="post" action="{{ url_for('reports.generate') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="report_type">Тип отчёта</label>
+    <select id="report_type" name="report_type" required>
+      {% for code, title in types.items() %}<option value="{{ code }}">{{ title }}</option>{% endfor %}
+    </select>
+    <label for="period">Период</label>
+    <select id="period" name="period" required>
+      {% for p in periods %}<option value="{{ p.id }}" {{ 'selected' if p.id == latest }}>{{ p.title }}</option>{% endfor %}
+    </select>
+    <label for="faculty">Факультет</label>
+    <select id="faculty" name="faculty" {{ 'disabled' if locked }}>
+      <option value="">Все факультеты</option>
+      {% for f in faculties %}<option value="{{ f.id }}">{{ f.name }}</option>{% endfor %}
+    </select>
+    {% if locked %}<p class="muted">Для вашей роли отчёт формируется по вашему факультету.</p>{% endif %}
+    <label for="format">Формат файла</label>
+    <select id="format" name="format" required>
+      <option value="xlsx">Excel (.xlsx)</option>
+      <option value="docx">Word (.docx)</option>
+      <option value="csv">CSV (.csv)</option>
+    </select>
+    <p><button class="btn" type="submit">Сформировать и скачать</button></p>
+  </form>
+</div>
+<p class="muted">Сформированные отчёты сохраняются в <a href="{{ url_for('cabinet.reports') }}">личном кабинете</a>.</p>
+{% endblock %}

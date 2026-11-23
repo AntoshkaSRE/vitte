@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ dash.title }}{% endblock %}
+{% block content %}
+<h1>{{ dash.title }}</h1>
+<p>{{ dash.description }}</p>
+
+<form method="get" class="filters" id="filters">
+  <div>
+    <label for="period">Период</label>
+    <select id="period" name="period" data-autosubmit>
+      {% for p in periods %}<option value="{{ p.id }}" {{ 'selected' if p.id == period_id }}>{{ p.title }}</option>{% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="faculty">Факультет</label>
+    <select id="faculty" name="faculty" data-autosubmit {{ 'disabled' if locked }}>
+      <option value="">Все факультеты</option>
+      {% for f in faculties %}<option value="{{ f.id }}" {{ 'selected' if f.id == faculty_id }}>{{ f.name }}</option>{% endfor %}
+    </select>
+    {% if locked %}<span class="muted">Доступны данные только вашего факультета.</span>{% endif %}
+  </div>
+  <div style="flex:0 0 auto">
+    <button class="btn btn-small" type="button" onclick="window.print()">Печать / PDF</button>
+  </div>
+</form>
+<form method="post" action="{{ url_for('dashboards.refresh') }}" class="inline">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  <input type="hidden" name="back" value="{{ request.full_path }}">
+  <button class="btn btn-small btn-primary" type="submit">Обновить данные</button>
+</form>
+
+<div class="widgets" style="margin-top:18px">
+  {% for w in widgets %}
+    <section class="widget {{ 'widget-kpi' if w.chart_type == 'kpi' }}" id="widget-{{ w.id }}">
+      <header>
+        <h3>{{ w.title }}</h3>
+        {% if w.chart_type != 'kpi' %}
+          <div class="tools"><button type="button" title="Сохранить как PNG" onclick="exportPng({{ w.id }}, '{{ w.title|replace("'", '') }}')">PNG</button></div>
+        {% endif %}
+      </header>
+      <div class="chart-box"><canvas></canvas></div>
+    </section>
+  {% endfor %}
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/chart.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script>
+  // Данные виджетов запрашиваются у JSON-API с учётом выбранных фильтров
+  loadDashboard("{{ url_for('api.dashboard_data', code=dash.code) }}?period={{ period_id }}&faculty={{ faculty_id or '' }}");
+</script>
+{% endblock %}

@@ -1,0 +1,12 @@
+<nav class="main-nav" style="border-radius:8px;margin-bottom:16px;background:var(--primary)">
+  <ul>
+    <li><a href="{{ url_for('admin.index') }}" class="{{ 'active' if active_endpoint == 'admin.index' }}">Сводка</a></li>
+    <li><a href="{{ url_for('admin.users') }}" class="{{ 'active' if active_endpoint.startswith('admin.user') }}">Пользователи</a></li>
+    <li><a href="{{ url_for('admin.catalogs') }}" class="{{ 'active' if active_endpoint == 'admin.catalogs' }}">Факультеты</a></li>
+    <li><a href="{{ url_for('admin.indicators') }}" class="{{ 'active' if active_endpoint == 'admin.indicators' }}">Показатели</a></li>
+    <li><a href="{{ url_for('admin.news') }}" class="{{ 'active' if active_endpoint == 'admin.news' }}">Новости</a></li>
+    <li><a href="{{ url_for('admin.feedback') }}" class="{{ 'active' if active_endpoint == 'admin.feedback' }}">Обращения</a></li>
+    <li><a href="{{ url_for('admin.integration') }}" class="{{ 'active' if active_endpoint == 'admin.integration' }}">Интеграция с 1С</a></li>
+    <li><a href="{{ url_for('admin.audit_log') }}" class="{{ 'active' if active_endpoint == 'admin.audit_log' }}">Аудит</a></li>
+  </ul>
+</nav>

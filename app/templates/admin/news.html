@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Управление новостями{% endblock %}
+{% block content %}
+<h1>Управление новостями</h1>
+{% include "admin/_nav.html" %}
+<div class="card form-card" style="max-width:none">
+  <h3>Новая новость</h3>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="action" value="add">
+    <label for="title">Заголовок</label><input type="text" id="title" name="title" required>
+    <label for="body">Текст</label><textarea id="body" name="body" required></textarea>
+    <p><button class="btn" type="submit">Опубликовать</button></p>
+  </form>
+</div>
+<div class="table-wrap"><table>
+  <thead><tr><th>Дата</th><th>Заголовок</th><th>Статус</th><th></th></tr></thead>
+  <tbody>
+    {% for n in rows %}
+      <tr><td>{{ n.published_at|dt }}</td><td>{{ n.title }}</td>
+          <td>{{ 'опубликована' if n.is_published else 'скрыта' }}</td>
+          <td>
+            <form class="inline" method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <input type="hidden" name="action" value="toggle"><input type="hidden" name="id" value="{{ n.id }}">
+              <button class="btn btn-small" type="submit">{{ 'Скрыть' if n.is_published else 'Показать' }}</button></form>
+            <form class="inline" method="post" data-confirm="Удалить новость?"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              <input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="{{ n.id }}">
+              <button class="btn btn-small btn-danger" type="submit">Удалить</button></form>
+          </td></tr>
+    {% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}

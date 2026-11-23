@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Редактирование пользователя' if edit else 'Новый пользователь' }}{% endblock %}
+{% block content %}
+<h1>{{ 'Редактирование: ' ~ edit.login if edit else 'Новый пользователь' }}</h1>
+{% include "admin/_nav.html" %}
+{% set v = edit or form %}
+<div class="card form-card">
+  {% if errors %}<div class="errors"><ul>{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul></div>{% endif %}
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% if not edit %}
+      <label for="login">Логин</label>
+      <input type="text" id="login" name="login" value="{{ form.get('login', '') }}" required>
+    {% endif %}
+    <label for="full_name">ФИО</label>
+    <input type="text" id="full_name" name="full_name" value="{{ v.get('full_name', '') }}" required>
+    <label for="email">Электронная почта</label>
+    <input type="email" id="email" name="email" value="{{ v.get('email', '') }}">
+    <label for="role_id">Роль</label>
+    <select id="role_id" name="role_id" required>
+      {% for r in roles %}<option value="{{ r.id }}" {{ 'selected' if (v.get('role_id')|string) == (r.id|string) }}>{{ r.name }}</option>{% endfor %}
+    </select>
+    <label for="faculty_id">Факультет (для роли «Деканат»)</label>
+    <select id="faculty_id" name="faculty_id">
+      <option value="">—</option>
+      {% for f in faculties %}<option value="{{ f.id }}" {{ 'selected' if (v.get('faculty_id')|string) == (f.id|string) }}>{{ f.short_name }}</option>{% endfor %}
+    </select>
+    <label for="password">{{ 'Новый пароль (оставьте пустым, чтобы не менять)' if edit else 'Пароль' }}</label>
+    <input type="password" id="password" name="password" autocomplete="new-password" {{ 'required' if not edit }}>
+    {% if edit %}
+      <label class="checkbox"><input type="checkbox" name="is_active" {{ 'checked' if edit.is_active }}> Учётная запись активна</label>
+    {% endif %}
+    <p><button class="btn" type="submit">Сохранить</button>
+       <a href="{{ url_for('admin.users') }}">Отмена</a></p>
+  </form>
+</div>
+{% endblock %}

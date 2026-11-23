@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Личный кабинет{% endblock %}
+{% block content %}
+<h1>Личный кабинет</h1>
+<div class="cabinet-layout">
+  {% include "cabinet/_menu.html" %}
+  <div>
+    <div class="card">
+      <h3>{{ current_user.full_name }}</h3>
+      <p>Роль: <span class="badge badge-info">{{ current_user.role_name }}</span>
+        {% if current_user.faculty_name %} · Факультет: {{ current_user.faculty_name }}{% endif %}</p>
+      <p class="muted">Логин: {{ current_user.login }}{% if current_user.email %} · {{ current_user.email }}{% endif %}</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card stat"><div class="value">{{ summary.reports }}</div><div class="label">отчётов сформировано</div></div>
+      <div class="card stat"><div class="value">{{ summary.files }}</div><div class="label">файлов загружено</div></div>
+      <div class="card stat"><div class="value">{{ summary.actions }}</div><div class="label">действий в журнале</div></div>
+    </div>
+    <h2>Последние действия</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Время</th><th>Действие</th><th>Подробности</th></tr></thead>
+      <tbody>
+        {% for a in last %}<tr><td>{{ a.created_at|dt }}</td><td>{{ a.action }}</td><td>{{ a.details }}</td></tr>
+        {% else %}<tr><td colspan="3">Действий пока нет.</td></tr>{% endfor %}
+      </tbody>
+    </table></div>
+  </div>
+</div>
+{% endblock %}

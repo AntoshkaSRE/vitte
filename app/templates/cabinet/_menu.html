@@ -1,0 +1,8 @@
+<ul class="side-menu">
+  <li><a href="{{ url_for('cabinet.index') }}" class="{{ 'active' if active_endpoint == 'cabinet.index' }}">Обзор</a></li>
+  <li><a href="{{ url_for('cabinet.profile') }}" class="{{ 'active' if active_endpoint == 'cabinet.profile' }}">Профиль</a></li>
+  <li><a href="{{ url_for('cabinet.password') }}" class="{{ 'active' if active_endpoint == 'cabinet.password' }}">Смена пароля</a></li>
+  <li><a href="{{ url_for('cabinet.reports') }}" class="{{ 'active' if active_endpoint == 'cabinet.reports' }}">Мои отчёты</a></li>
+  <li><a href="{{ url_for('cabinet.my_files') }}" class="{{ 'active' if active_endpoint == 'cabinet.my_files' }}">Мои файлы</a></li>
+  <li><a href="{{ url_for('cabinet.settings') }}" class="{{ 'active' if active_endpoint == 'cabinet.settings' }}">Настройки</a></li>
+</ul>

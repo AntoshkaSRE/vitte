@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Интеграция с 1С{% endblock %}
+{% block content %}
+<h1>Интеграция с «1С:Предприятие»</h1>
+{% include "admin/_nav.html" %}
+<div class="grid grid-2">
+  <div class="card">
+    <h3>Параметры подключения</h3>
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="action" value="save">
+      <label for="onec_url">Адрес HTTP-сервиса 1С (пусто — файл-эмулятор)</label>
+      <input type="text" id="onec_url" name="onec_url" value="{{ settings.get('onec_url', '') }}" placeholder="http://1c-server/stat/hs/export">
+      <label for="onec_base">Информационная база</label>
+      <input type="text" id="onec_base" name="onec_base" value="{{ settings.get('onec_base', '') }}">
+      <label for="onec_login">Учётная запись (только чтение)</label>
+      <input type="text" id="onec_login" name="onec_login" value="{{ settings.get('onec_login', '') }}">
+      <label for="sync_interval_minutes">Интервал обновления, минут</label>
+      <input type="text" id="sync_interval_minutes" name="sync_interval_minutes" value="{{ settings.get('sync_interval_minutes', '60') }}">
+      <p><button class="btn" type="submit">Сохранить</button></p>
+    </form>
+  </div>
+  <div class="card">
+    <h3>Синхронизация</h3>
+    <p>Загрузка значений показателей из 1С в витрину данных. После загрузки кэш агрегатов сбрасывается.</p>
+    <form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="action" value="sync">
+      <button class="btn btn-primary" type="submit">Запустить синхронизацию</button></form>
+  </div>
+</div>
+<h2>Журнал синхронизации</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Начало</th><th>Источник</th><th>Статус</th><th class="num">Записей</th><th>Сообщение</th></tr></thead>
+  <tbody>
+    {% for s in log %}
+      <tr><td>{{ s.started_at|dt }}</td><td>{{ s.source }}</td>
+          <td><span class="badge {{ 'badge-ok' if s.status == 'ok' else 'badge-no' }}">{{ s.status }}</span></td>
+          <td class="num">{{ s.rows_loaded }}</td><td>{{ s.message }}</td></tr>
+    {% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}

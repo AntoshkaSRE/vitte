@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Справочник факультетов{% endblock %}
+{% block content %}
+<h1>Справочник факультетов</h1>
+{% include "admin/_nav.html" %}
+<div class="card">
+  <h3>Добавить факультет</h3>
+  <form method="post" class="form-row">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="action" value="add">
+    <div><label for="code">Код</label><input type="text" id="code" name="code" maxlength="10" required></div>
+    <div><label for="name">Название</label><input type="text" id="name" name="name" required></div>
+    <div><label for="short_name">Сокращение</label><input type="text" id="short_name" name="short_name" required></div>
+    <div style="flex:0 0 auto"><button class="btn" type="submit">Добавить</button></div>
+  </form>
+</div>
+<div class="table-wrap"><table>
+  <thead><tr><th>Код</th><th>Название</th><th>Сокращение</th><th class="num">Направлений</th><th></th></tr></thead>
+  <tbody>
+    {% for f in rows %}
+      <tr><td>{{ f.code }}</td><td>{{ f.name }}</td><td>{{ f.short_name }}</td><td class="num">{{ f.directions }}</td>
+          <td><form class="inline" method="post" data-confirm="Удалить факультет «{{ f.short_name }}»?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="{{ f.id }}">
+            <button class="btn btn-small btn-danger" type="submit">Удалить</button></form></td></tr>
+    {% endfor %}
+  </tbody>
+</table></div>
+{% endblock %}
