@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Открытая статистика{% endblock %}
+{% block content %}
+<h1>Открытая статистика</h1>
+<p>Здесь доступны публичные показатели университета. Подробные дашборды и отчёты доступны после входа в систему.</p>
+<div class="filters">
+  <div>
+    <label for="indicator">Показатель</label>
+    <select id="indicator">
+      {% for i in indicators %}<option value="{{ i.code }}">{{ i.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="period">Период</label>
+    <select id="period">
+      {% for p in periods %}<option value="{{ p.id }}" {{ 'selected' if p.id == latest }}>{{ p.title }}</option>{% endfor %}
+    </select>
+  </div>
+</div>
+<div class="widgets">
+  <div class="widget" id="widget-pub-compare"><header><h3>Сравнение факультетов</h3></header><div class="chart-box"><canvas></canvas></div></div>
+  <div class="widget" id="widget-pub-dynamics"><header><h3>Динамика по периодам</h3></header><div class="chart-box"><canvas></canvas></div></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/chart.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+<script>
+  // Перерисовка обеих диаграмм при смене показателя или периода
+  const indicatorSelect = document.getElementById("indicator");
+  const periodSelect = document.getElementById("period");
+  const refresh = () => loadPublic(indicatorSelect.value, periodSelect.value);
+  indicatorSelect.addEventListener("change", refresh);
+  periodSelect.addEventListener("change", refresh);
+  refresh();
+</script>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Статистика университета — наглядно и без ручной выгрузки</h1>
+  <p>Витте-Дашборд автоматически забирает данные единого центра статистических данных из «1С:Предприятие»
+    и показывает их в виде интерактивных дашбордов, диаграмм и отчётов для руководства, УМУ и деканатов.</p>
+  {% if current_user %}
+    <a class="btn" href="{{ url_for('dashboards.index') }}">Открыть дашборды</a>
+  {% else %}
+    <a class="btn" href="{{ url_for('auth.login') }}">Войти в систему</a>
+    <a class="btn btn-primary" href="{{ url_for('public.open_stats') }}">Открытая статистика</a>
+  {% endif %}
+</section>
+
+<h2>Университет в цифрах <small class="muted">({{ period_title }})</small></h2>
+<div class="grid grid-4">
+  <div class="card stat"><div class="value">{{ totals.STUDENTS_TOTAL|num }}</div><div class="label">студентов</div></div>
+  <div class="card stat"><div class="value">{{ totals.AVG_GRADE|num }}</div><div class="label">средний балл</div></div>
+  <div class="card stat"><div class="value">{{ totals.STAFF_TOTAL|num }}</div><div class="label">преподавателей</div></div>
+  <div class="card stat"><div class="value">{{ counts.faculties }} / {{ counts.directions }}</div><div class="label">факультетов / направлений</div></div>
+</div>
+
+<h2>Что умеет модуль</h2>
+<div class="grid grid-3">
+  <div class="card"><h3>Автоматическая загрузка</h3><p>Данные поступают из 1С через HTTP-сервис и обновляются раз в час или по кнопке.</p></div>
+  <div class="card"><h3>Дашборды</h3><p>Столбчатые, линейные и круговые диаграммы с фильтрами по периоду и факультету.</p></div>
+  <div class="card"><h3>Отчёты</h3><p>Выгрузка в Word, Excel и CSV, а также сохранение диаграмм в PNG.</p></div>
+</div>
+
+<h2>Последние новости</h2>
+<div class="grid grid-3">
+  {% for item in news %}
+    <article class="card">
+      <h3><a href="{{ url_for('public.news_detail', news_id=item.id) }}">{{ item.title }}</a></h3>
+      <p class="muted">{{ item.published_at|dt }}</p>
+      <p>{{ item.summary }}</p>
+    </article>
+  {% else %}
+    <p>Новостей пока нет.</p>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Карта сайта{% endblock %}
+{% block content %}
+<h1>Карта сайта</h1>
+<div class="grid grid-3">
+  <div class="card">
+    <h3>Открытая часть</h3>
+    <ul class="list">
+      {% for title, endpoint in main_menu %}<li><a href="{{ url_for(endpoint) }}">{{ title }}</a></li>{% endfor %}
+      <li><a href="{{ url_for('auth.login') }}">Вход</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Для авторизованных</h3>
+    <ul class="list">
+      <li><a href="{{ url_for('dashboards.index') }}">Дашборды</a></li>
+      <li><a href="{{ url_for('reports.index') }}">Отчёты</a></li>
+      <li><a href="{{ url_for('cabinet.index') }}">Личный кабинет</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Администратору</h3>
+    <ul class="list">
+      <li><a href="{{ url_for('admin.index') }}">Панель администратора</a></li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

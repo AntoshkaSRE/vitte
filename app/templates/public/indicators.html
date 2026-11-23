@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Показатели{% endblock %}
+{% block content %}
+<h1>Каталог статистических показателей</h1>
+<form method="get" class="filters">
+  <div>
+    <label for="category">Категория</label>
+    <select id="category" name="category" data-autosubmit>
+      <option value="">Все категории</option>
+      {% for c in categories %}
+        <option value="{{ c.category }}" {{ 'selected' if c.category == selected }}>{{ c.category }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <noscript><button class="btn" type="submit">Показать</button></noscript>
+</form>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>Код</th><th>Показатель</th><th>Ед. изм.</th><th>Категория</th><th>Описание</th><th>Доступ</th></tr></thead>
+    <tbody>
+    {% for i in indicators %}
+      <tr>
+        <td><code>{{ i.code }}</code></td><td>{{ i.name }}</td><td>{{ i.unit }}</td>
+        <td>{{ i.category }}</td><td>{{ i.description }}</td>
+        <td>{% if i.is_public %}<span class="badge badge-ok">открытый</span>{% else %}<span class="badge">по ролям</span>{% endif %}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="6">Показатели не найдены.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

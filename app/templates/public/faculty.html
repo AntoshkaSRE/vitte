@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ faculty.short_name }}{% endblock %}
+{% block content %}
+<h1>{{ faculty.name }}</h1>
+<p>Декан: <strong>{{ faculty.dean_name or '—' }}</strong></p>
+<div class="grid grid-2">
+  <div class="card">
+    <h3>Направления подготовки</h3>
+    <ul class="list">
+      {% for d in directions %}<li>{{ d.code }} — {{ d.name }} ({{ d.level|lower }})</li>{% else %}<li>нет данных</li>{% endfor %}
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Кафедры</h3>
+    <ul class="list">
+      {% for c in departments %}<li>{{ c.name }}{% if c.head_name %} — {{ c.head_name }}{% endif %}</li>{% else %}<li>нет данных</li>{% endfor %}
+    </ul>
+  </div>
+</div>
+<h2>Открытые показатели</h2>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>Показатель</th><th class="num">Значение</th><th>Ед. изм.</th></tr></thead>
+    <tbody>
+      {% for v in values %}<tr><td>{{ v.name }}</td><td class="num">{{ v.value|num }}</td><td>{{ v.unit }}</td></tr>
+      {% else %}<tr><td colspan="3">Данные ещё не загружены.</td></tr>{% endfor %}
+    </tbody>
+  </table>
+</div>
+<p><a href="{{ url_for('public.faculties') }}">← Ко всем факультетам</a></p>
+{% endblock %}

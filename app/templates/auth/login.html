@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+<div class="card form-card" style="margin:0 auto">
+  <h1>Вход в систему</h1>
+  {% if error %}<div class="errors">{{ error }}</div>{% endif %}
+  <form method="post" autocomplete="on">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="login">Логин</label>
+    <input type="text" id="login" name="login" required autofocus autocomplete="username">
+    <label for="password">Пароль</label>
+    <input type="password" id="password" name="password" required autocomplete="current-password">
+    <p><button class="btn" type="submit">Войти</button></p>
+  </form>
+  <p class="muted">Учётные записи выдаёт администратор системы. Нет доступа? Напишите через
+    <a href="{{ url_for('public.contacts') }}">форму обратной связи</a>.</p>
+</div>
+{% endblock %}

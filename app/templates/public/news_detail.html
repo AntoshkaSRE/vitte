@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ item.title }}{% endblock %}
+{% block content %}
+<article class="card">
+  <h1>{{ item.title }}</h1>
+  <p class="muted">{{ item.published_at|dt }}{% if item.author %} · {{ item.author }}{% endif %}</p>
+  <p><strong>{{ item.summary }}</strong></p>
+  <p>{{ item.body }}</p>
+  <p><a href="{{ url_for('public.news_list') }}">← Ко всем новостям</a></p>
+</article>
+{% endblock %}

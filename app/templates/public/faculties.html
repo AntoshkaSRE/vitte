@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Факультеты{% endblock %}
+{% block content %}
+<h1>Факультеты университета</h1>
+<div class="grid grid-3">
+  {% for f in faculties %}
+    <article class="card">
+      <h3><a href="{{ url_for('public.faculty_detail', code=f.code) }}">{{ f.name }}</a></h3>
+      <p class="muted">Декан: {{ f.dean_name or '—' }}</p>
+      <p><span class="badge badge-info">направлений: {{ f.directions }}</span>
+         <span class="badge">кафедр: {{ f.departments }}</span></p>
+    </article>
+  {% endfor %}
+</div>
+{% endblock %}

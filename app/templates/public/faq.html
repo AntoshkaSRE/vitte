@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Вопросы и ответы{% endblock %}
+{% block content %}
+<h1>Вопросы и ответы</h1>
+{% for question, answer in items %}
+  <details class="faq" {{ 'open' if loop.first }}>
+    <summary>{{ question }}</summary>
+    <p>{{ answer }}</p>
+  </details>
+{% endfor %}
+<p>Не нашли ответ? Напишите нам через <a href="{{ url_for('public.contacts') }}">форму обратной связи</a>.</p>
+{% endblock %}

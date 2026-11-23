@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Направления подготовки{% endblock %}
+{% block content %}
+<h1>Направления подготовки</h1>
+<form method="get" class="filters">
+  <div>
+    <label for="q">Поиск по названию или коду</label>
+    <input type="search" id="q" name="q" value="{{ q }}" placeholder="Например: 09.03 или информатика">
+  </div>
+  <div style="flex:0 0 auto"><button class="btn" type="submit">Найти</button></div>
+</form>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>Код</th><th>Направление</th><th>Факультет</th><th>Уровень</th><th class="num">Групп</th></tr></thead>
+    <tbody>
+    {% for d in directions %}
+      <tr><td>{{ d.code }}</td><td>{{ d.name }}</td><td>{{ d.faculty }}</td><td>{{ d.level }}</td><td class="num">{{ d.groups }}</td></tr>
+    {% else %}
+      <tr><td colspan="5">По запросу «{{ q }}» ничего не найдено.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
