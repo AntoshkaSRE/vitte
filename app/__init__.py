@@ -1,5 +1,5 @@
 """Фабрика приложения Витте-Дашборд (Flask)."""
-from flask import Flask, g, render_template, request, url_for
+from flask import Flask, g, request
 
 from app import auth, db
 from app.config import Config

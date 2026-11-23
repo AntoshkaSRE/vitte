@@ -1,0 +1,24 @@
+# Описание размещения на бесплатном хостинге Render (Blueprint).
+# База PostgreSQL и веб-сервис создаются автоматически из этого файла.
+databases:
+  - name: vitte-db
+    plan: free
+    databaseName: vitte
+    user: vitte
+
+services:
+  - type: web
+    name: vitte
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python tools/init_db.py
+    startCommand: gunicorn main:app --bind 0.0.0.0:$PORT --workers 2
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vitte-db
+          property: connectionString

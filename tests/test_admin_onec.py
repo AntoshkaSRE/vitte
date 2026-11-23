@@ -5,7 +5,7 @@ import pytest
 
 from app.db import query_one
 from app.services import onec
-from tests.conftest import login, post
+from tests.conftest import post
 
 
 def test_admin_pages_open(as_admin):
