@@ -50,8 +50,9 @@ function renderWidget(widget) {
   charts[widget.id] = new Chart(body.querySelector("canvas"), buildConfig(widget));
 }
 
-/** Загружает данные дашборда с сервера и перерисовывает все виджеты. */
-async function loadDashboard(url) {
+/** Загружает данные дашборда с сервера и перерисовывает все виджеты.
+ *  prefChart — предпочтительный тип графика из личных настроек: заменяет столбчатые диаграммы. */
+async function loadDashboard(url, prefChart) {
   const response = await fetch(url, { headers: { Accept: "application/json" } });
   if (!response.ok) {
     document.querySelectorAll(".chart-box").forEach((box) => {
@@ -59,7 +60,10 @@ async function loadDashboard(url) {
     });
     return;
   }
-  (await response.json()).forEach(renderWidget);
+  (await response.json()).forEach((widget) => {
+    if (widget.type === "bar" && (prefChart === "line" || prefChart === "pie")) widget.type = prefChart;
+    renderWidget(widget);
+  });
 }
 
 /** Сохраняет диаграмму виджета в PNG-файл. */

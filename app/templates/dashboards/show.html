@@ -48,6 +48,6 @@
 <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
 <script>
   // Данные виджетов запрашиваются у JSON-API с учётом выбранных фильтров
-  loadDashboard("{{ url_for('api.dashboard_data', code=dash.code) }}?period={{ period_id }}&faculty={{ faculty_id or '' }}");
+  loadDashboard("{{ url_for('api.dashboard_data', code=dash.code) }}?period={{ period_id }}&faculty={{ faculty_id or '' }}", "{{ (current_user.preferences or {}).get('chart', 'bar') }}");
 </script>
 {% endblock %}
