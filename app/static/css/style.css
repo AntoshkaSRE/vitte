@@ -179,6 +179,8 @@ details.faq summary { cursor: pointer; font-weight: 600; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 1.6rem; }
   .user-link small { display: none; }
+  /* Длинное ФИО в шапке не должно занимать несколько строк на смартфоне */
+  .user-link { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .85rem; }
 }
 @media print {
   .site-header, .site-footer, .breadcrumbs, .filters, .tools, .btn { display: none !important; }
