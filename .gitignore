@@ -2,6 +2,8 @@
 __pycache__/
 *.pyc
 .env
+.venv/
+.pytest_cache/
 
 # IDE
 .vscode/
@@ -10,9 +12,11 @@ __pycache__/
 # Logs
 *.log
 
-# Database
-*.db
-*.sqlite
+# Файлы пользователей, загруженные во время работы приложения
+instance/uploads/*
+!instance/uploads/.gitkeep
+instance/exports/*
+!instance/exports/.gitkeep
 
 # OS
 .DS_Store
