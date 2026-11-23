@@ -3,7 +3,7 @@ from flask import Blueprint, abort, flash, g, redirect, request, url_for
 
 from app.auth import audit, faculty_scope, login_required
 from app.db import query_all, query_one
-from app.helpers import page, to_int
+from app.helpers import page, safe_target, to_int
 from app.services import stats
 from app.services.cache import clear_cache
 
@@ -29,7 +29,9 @@ def load_dashboard(code: str) -> dict:
 
 def resolve_filters() -> tuple[int, int | None]:
     """Определяет период и факультет из параметров запроса с учётом прав деканата."""
-    period_id = to_int(request.args.get("period"), None) or stats.latest_period_id()
+    # Приоритет: параметр запроса, затем период из личных настроек, затем последний с данными
+    saved = (g.user["preferences"] or {}).get("period")
+    period_id = to_int(request.args.get("period"), None) or saved or stats.latest_period_id()
     faculty_id = faculty_scope() or to_int(request.args.get("faculty"), None)
     return period_id, faculty_id
 
@@ -64,4 +66,4 @@ def refresh():
     removed = clear_cache()
     audit("refresh", f"Сброс кэша, удалено записей: {removed}")
     flash("Данные дашбордов обновлены.", "success")
-    return redirect(request.form.get("back") or url_for("dashboards.index"))
+    return redirect(safe_target(request.form.get("back"), url_for("dashboards.index")))
