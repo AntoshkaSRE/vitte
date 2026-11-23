@@ -2,7 +2,7 @@
 
 Не учитываются: пустые строки, строки комментариев, строки только с управляющими
 символами (скобки, `end`-теги), сторонняя библиотека Chart.js и автоматически
-сгенерированные файлы (sql/insert_test_data.sql, data/onec_export.json).
+сгенерированные файлы (sql/insert_test_data.sql, sql/vitte_dump.sql, data/onec_export.json).
 Запуск: python tools/count_loc.py
 """
 import re
@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 EXCLUDE = {"vendor", ".venv", "__pycache__", ".git", "instance"}
-GENERATED = {"insert_test_data.sql", "onec_export.json"}
+GENERATED = {"insert_test_data.sql", "vitte_dump.sql", "onec_export.json"}
 # Строки, состоящие только из управляющих символов
 CONTROL_ONLY = re.compile(r"^[\s{}()\[\];,]*$")
 
