@@ -1,0 +1,2525 @@
+{
+ "source": "UniversityStat (эмулятор ответа HTTP-сервиса 1С:Предприятие)",
+ "values": [
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 357
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 262
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 95
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 90
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 14
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 4.1
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 89.33
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 32
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 64.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 21152
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-1",
+   "faculty": "FIT",
+   "value": 46
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 452
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 297
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 155
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 112
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 13
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 4.15
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 87.28
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 48
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 53.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 34080
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-1",
+   "faculty": "FEU",
+   "value": 50
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 77
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 54
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 23
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 21
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 2
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 4.04
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 91.25
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 70.1
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 8052
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-1",
+   "faculty": "LAW",
+   "value": 11
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 113
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 76
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 37
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 32
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 2
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 4.27
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 86.71
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 68.3
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 8700
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-1",
+   "faculty": "PSY",
+   "value": 15
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 142
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 98
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 44
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 37
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 2
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 4.14
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 89.57
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 14
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 55.4
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 9016
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-1",
+   "faculty": "DES",
+   "value": 20
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 348
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 244
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 104
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 14
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 67
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 4.09
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 88.93
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 33
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 65.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 24816
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-2",
+   "faculty": "FIT",
+   "value": 41
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 449
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 338
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 111
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 9
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 99
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 4.16
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 86.98
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 38
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 71.6
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 26752
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-2",
+   "faculty": "FEU",
+   "value": 41
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 74
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 58
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 16
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 2
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 13
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 4.05
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 90.01
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 61.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 8268
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-2",
+   "faculty": "LAW",
+   "value": 16
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 115
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 88
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 27
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 4
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 25
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 4.29
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 87.73
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 57.7
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 9000
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-2",
+   "faculty": "PSY",
+   "value": 17
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 140
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 106
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 34
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 2
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 29
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 4.13
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 89.7
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 15
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 58.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 11160
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2023/2024-2",
+   "faculty": "DES",
+   "value": 14
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 349
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 245
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 104
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 92
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 15
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 4.12
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 90.39
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 34
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 52.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 23460
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-1",
+   "faculty": "FIT",
+   "value": 31
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 447
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 320
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 127
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 134
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 14
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 4.15
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 87.14
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 41
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 59.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 27921
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-1",
+   "faculty": "FEU",
+   "value": 43
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 78
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 48
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 30
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 22
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 3
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 4.04
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 92.34
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 60.3
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 8304
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-1",
+   "faculty": "LAW",
+   "value": 11
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 115
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 73
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 42
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 33
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 3
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 4.28
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 85.53
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 60.9
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 8592
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-1",
+   "faculty": "PSY",
+   "value": 11
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 141
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 89
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 52
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 36
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 6
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 4.17
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 90.07
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 15
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 71.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 11355
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-1",
+   "faculty": "DES",
+   "value": 24
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 377
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 282
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 95
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 16
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 70
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 4.13
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 90.42
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 37
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 66.3
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 25678
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-2",
+   "faculty": "FIT",
+   "value": 56
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 464
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 292
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 172
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 12
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 93
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 4.19
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 88.04
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 44
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 52.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 28424
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-2",
+   "faculty": "FEU",
+   "value": 50
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 77
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 53
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 24
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 3
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 16
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 4.03
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 89.27
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 60.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 8208
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-2",
+   "faculty": "LAW",
+   "value": 19
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 121
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 75
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 46
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 4
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 24
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 4.3
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 88.7
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 13
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 68.4
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 9035
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-2",
+   "faculty": "PSY",
+   "value": 19
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 144
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 105
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 39
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 5
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 29
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 4.19
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 89.73
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 14
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 65.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 9982
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2024/2025-2",
+   "faculty": "DES",
+   "value": 20
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 376
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 249
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 127
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 101
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 11
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 4.15
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 90.04
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 37
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 56.0
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 27565
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-1",
+   "faculty": "FIT",
+   "value": 48
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 454
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 295
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 159
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 101
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 14
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 4.18
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 87.25
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 44
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 63.1
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 29788
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-1",
+   "faculty": "FEU",
+   "value": 50
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 78
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 59
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 19
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 22
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 3
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 4.14
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 91.55
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 64.6
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 7920
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-1",
+   "faculty": "LAW",
+   "value": 13
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 116
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 82
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 34
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 28
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 5
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 4.34
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 87.84
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 56.3
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 9084
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-1",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 156
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 112
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 44
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 43
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 7
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 4.16
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 90.91
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 14
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 53.3
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 9562
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-1",
+   "faculty": "DES",
+   "value": 16
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 373
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 257
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 116
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 9
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 70
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 4.18
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 89.85
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 36
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 59.9
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 26820
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-2",
+   "faculty": "FIT",
+   "value": 57
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 456
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 338
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 118
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 10
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 92
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 4.18
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 88.52
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 44
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 51.3
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 30140
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-2",
+   "faculty": "FEU",
+   "value": 49
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 80
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 54
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 26
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 2
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 16
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 4.14
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 89.85
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 62.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 8604
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-2",
+   "faculty": "LAW",
+   "value": 10
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 117
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 86
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 31
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 3
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 21
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 4.39
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 89.86
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 69.5
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 8340
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-2",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 143
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 96
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 47
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 5
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 26
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 4.18
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 91.23
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 56.2
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 7788
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2025/2026-2",
+   "faculty": "DES",
+   "value": 12
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 380
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 239
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 141
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 110
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 12
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 4.15
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 91.24
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 38
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 62.5
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 27588
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2026/2027-1",
+   "faculty": "FIT",
+   "value": 49
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 474
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 333
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 141
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 115
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 7
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 4.2
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 88.44
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 44
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 61.6
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 28776
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2026/2027-1",
+   "faculty": "FEU",
+   "value": 60
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 85
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 54
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 31
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 24
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 4
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 4.11
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 92.54
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 72.6
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 8784
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2026/2027-1",
+   "faculty": "LAW",
+   "value": 13
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 126
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 81
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 45
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 33
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 1
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 4.35
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 88.72
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 12
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 70.1
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 8112
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2026/2027-1",
+   "faculty": "PSY",
+   "value": 14
+  },
+  {
+   "indicator": "STUDENTS_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 157
+  },
+  {
+   "indicator": "STUDENTS_FULLTIME",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 107
+  },
+  {
+   "indicator": "STUDENTS_PARTTIME",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 50
+  },
+  {
+   "indicator": "ADMITTED",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 45
+  },
+  {
+   "indicator": "EXPELLED",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 3
+  },
+  {
+   "indicator": "GRADUATES",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 0
+  },
+  {
+   "indicator": "AVG_GRADE",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 4.25
+  },
+  {
+   "indicator": "PASS_RATE",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 92.66
+  },
+  {
+   "indicator": "STAFF_TOTAL",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 14
+  },
+  {
+   "indicator": "STAFF_DEGREE",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 52.8
+  },
+  {
+   "indicator": "LOAD_HOURS",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 9506
+  },
+  {
+   "indicator": "PUBLICATIONS",
+   "period": "2026/2027-1",
+   "faculty": "DES",
+   "value": 13
+  }
+ ]
+}
