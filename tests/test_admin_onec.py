@@ -125,3 +125,18 @@ def test_sync_unavailable_service(app, fresh_db):
     with app.app_context():
         onec.set_setting("onec_url", "http://127.0.0.1:9/none")
         assert "недоступен" in onec.run_sync(None)["message"]
+
+
+def test_admin_new_user_rejects_password_equal_to_login(as_admin):
+    """Администратор не может создать пользователя с паролем, равным логину."""
+    data = {"login": "Same_Login1", "full_name": "Нормальное Имя", "email": "", "role_id": 3,
+            "faculty_id": "", "password": "same_login1"}
+    html = post(as_admin, "/admin/users/new", data).get_data(as_text=True)
+    assert "не должен совпадать с логином" in html
+
+def test_admin_new_user_rejects_password_equal_to_login(as_admin):
+    """Администратор не может создать пользователя с паролем, равным логину."""
+    data = {"login": "Same_Login1", "full_name": "Нормальное Имя", "email": "", "role_id": 3,
+            "faculty_id": "", "password": "same_login1"}
+    html = post(as_admin, "/admin/users/new", data).get_data(as_text=True)
+    assert "не должен совпадать с логином" in html

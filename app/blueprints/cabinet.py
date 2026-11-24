@@ -7,6 +7,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from app.auth import audit, login_required
 from app.db import execute, query_all, query_one
 from app.helpers import page, to_int
+from app.passwords import check_strength
 from app.services import files, stats
 
 bp = Blueprint("cabinet", __name__, url_prefix="/cabinet")
@@ -63,8 +64,9 @@ def password():
         row = query_one("SELECT password_hash FROM users WHERE id = %s", (g.user["id"],))
         if not check_password_hash(row["password_hash"], old):
             errors.append("Текущий пароль указан неверно.")
-        if len(new) < 8 or new.isdigit() or new.isalpha():
-            errors.append("Новый пароль: не менее 8 символов, буквы и цифры или символы.")
+        weakness = check_strength(new, g.user["login"])
+        if weakness:
+            errors.append(f"Новый пароль: {weakness}")
         if new != again:
             errors.append("Подтверждение не совпадает с новым паролем.")
         if not errors:

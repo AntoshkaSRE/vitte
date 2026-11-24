@@ -125,3 +125,17 @@ def test_files_isolated_between_users(client, fresh_db):
     other = client.application.test_client()
     login(other, "rector")
     assert other.get("/cabinet/files/1/download").status_code == 404
+
+
+def test_password_change_rejects_common_password(client):
+    """Распространённый пароль отклоняется при смене пароля в кабинете."""
+    login(client, "umu")
+    html = post(client, "/cabinet/password", {"old": "Umu#2026", "new": "Password1", "again": "Password1"}).get_data(as_text=True)
+    assert "слишком распространён" in html
+
+
+def test_password_change_rejects_login_as_password(client):
+    """Пароль, совпадающий с логином, отклоняется (логин dean_fit состоит из 8 символов)."""
+    login(client, "dean_fit")
+    html = post(client, "/cabinet/password", {"old": "Dean#2026", "new": "DEAN_fit", "again": "DEAN_fit"}).get_data(as_text=True)
+    assert "не должен совпадать с логином" in html

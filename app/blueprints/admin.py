@@ -6,6 +6,7 @@ from werkzeug.security import generate_password_hash
 from app.auth import ROLE_ADMIN, audit, role_required
 from app.db import execute, query_all, query_one
 from app.helpers import page, to_int
+from app.passwords import check_strength
 from app.services import onec
 from app.services.cache import clear_cache
 
@@ -59,8 +60,9 @@ def user_new():
             errors.append("Логин: от 3 символов, латиница, цифры и «_».")
         if len(form["full_name"]) < 5:
             errors.append("Укажите ФИО полностью.")
-        if len(password) < 8:
-            errors.append("Пароль должен содержать не менее 8 символов.")
+        weakness = check_strength(password, form["login"])
+        if weakness:
+            errors.append(weakness)
         if not to_int(form["role_id"]):
             errors.append("Выберите роль.")
         if not errors:
@@ -98,8 +100,9 @@ def user_edit(user_id):
             errors.append("Нельзя изменить собственную роль: система должна сохранить администратора.")
         if len(full_name) < 5:
             errors.append("Укажите ФИО полностью.")
-        if password and len(password) < 8:
-            errors.append("Новый пароль должен содержать не менее 8 символов.")
+        weakness = check_strength(password, target["login"]) if password else None
+        if weakness:
+            errors.append(f"Новый пароль: {weakness}")
         if not errors:
             execute("""UPDATE users SET full_name = %s, email = %s, role_id = %s, faculty_id = %s, is_active = %s
                        WHERE id = %s""",
