@@ -85,7 +85,7 @@ docs/                 тест-план, тест-кейсы, баг-репор�
 
 ```powershell
 python tools/init_db.py --test      # подготовить тестовую БД vitte_test
-python -m pytest -q                 # 127 автотестов
+python -m pytest -q                 # 172 автотеста
 python tools/load_test.py 10 30     # нагрузочный тест при запущенном приложении
 ```
 
