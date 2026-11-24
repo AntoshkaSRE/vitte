@@ -64,3 +64,10 @@ def test_favicon_linked_and_served(client):
     assert redirect.status_code == 301 and redirect.headers["Location"].endswith("/static/favicon.svg")
     svg = client.get("/static/favicon.svg")
     assert svg.status_code == 200 and svg.mimetype == "image/svg+xml"
+
+def test_meta_description(client):
+    """На каждой странице есть описание, а в новости оно берётся из краткого содержания."""
+    assert 'name="description"' in client.get("/about").get_data(as_text=True)
+    html = client.get("/news/1").get_data(as_text=True)
+    assert 'name="description" content="' in html
+    assert 'name="theme-color"' in html
