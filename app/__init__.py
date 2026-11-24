@@ -6,6 +6,9 @@ from app.config import Config
 from app.helpers import page
 from app.throttle import LoginThrottle
 
+# Версия приложения: выводится в подвале страниц и в ответе /healthz
+__version__ = "1.0.0"
+
 # Пункты главного меню: (название, endpoint, нужен ли вход)
 MAIN_MENU = [
     ("Главная", "public.index"),
@@ -59,6 +62,7 @@ def create_app(config_object=Config) -> Flask:
             "csrf_token": auth.csrf_token,
             "author_name": app.config["AUTHOR_NAME"],
             "thesis_topic": app.config["THESIS_TOPIC"],
+            "app_version": __version__,
             "current_user": g.get("user"),
             "active_endpoint": request.endpoint or "",
         }

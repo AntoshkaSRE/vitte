@@ -3,6 +3,7 @@ from xml.sax.saxutils import escape
 
 from flask import Blueprint, Response, jsonify, redirect, url_for
 
+from app import __version__
 from app.db import query_all, query_one
 
 bp = Blueprint("ops", __name__)
@@ -50,4 +51,4 @@ def healthz():
         query_one("SELECT 1 AS ok")
     except Exception:  # noqa: BLE001 - любая ошибка подключения означает «база недоступна»
         return jsonify(status="error", database="unavailable"), 503
-    return jsonify(status="ok", database="ok")
+    return jsonify(status="ok", database="ok", version=__version__)

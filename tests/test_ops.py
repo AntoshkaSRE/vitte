@@ -1,4 +1,5 @@
 """Тесты служебных адресов и настроек безопасности (проверка работоспособности, заголовки и т.п.)."""
+from app import __version__
 from app.blueprints import ops
 
 
@@ -6,7 +7,7 @@ def test_healthz_ok(client):
     """Проверка работоспособности отвечает 200 и сообщает о доступной базе данных."""
     response = client.get("/healthz")
     assert response.status_code == 200
-    assert response.get_json() == {"status": "ok", "database": "ok"}
+    assert response.get_json() == {"status": "ok", "database": "ok", "version": __version__}
 
 
 def test_healthz_database_down(client, monkeypatch):
@@ -71,3 +72,7 @@ def test_meta_description(client):
     html = client.get("/news/1").get_data(as_text=True)
     assert 'name="description" content="' in html
     assert 'name="theme-color"' in html
+
+def test_version_in_footer(client):
+    """Номер версии выводится в подвале каждой страницы."""
+    assert f"Версия {__version__}" in client.get("/").get_data(as_text=True)
