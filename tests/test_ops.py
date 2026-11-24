@@ -18,3 +18,23 @@ def test_healthz_database_down(client, monkeypatch):
     response = client.get("/healthz")
     assert response.status_code == 503
     assert response.get_json()["status"] == "error"
+
+
+def test_robots_txt(client):
+    """robots.txt закрывает личные разделы от индексации и указывает карту сайта."""
+    response = client.get("/robots.txt")
+    text = response.get_data(as_text=True)
+    assert response.status_code == 200 and response.mimetype == "text/plain"
+    assert "Disallow: /admin/" in text and "Disallow: /cabinet/" in text
+    assert "Sitemap: http://localhost/sitemap.xml" in text
+
+
+def test_sitemap_xml(client):
+    """sitemap.xml содержит статические страницы, факультеты и новости."""
+    response = client.get("/sitemap.xml")
+    text = response.get_data(as_text=True)
+    assert response.status_code == 200 and response.mimetype == "application/xml"
+    assert "<loc>http://localhost/about</loc>" in text
+    assert "<loc>http://localhost/faculties/FIT</loc>" in text
+    assert "<loc>http://localhost/news/1</loc>" in text
+    assert "/admin/" not in text
