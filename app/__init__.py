@@ -4,6 +4,7 @@ from flask import Flask, g, request
 from app import auth, db
 from app.config import Config
 from app.helpers import page
+from app.throttle import LoginThrottle
 
 # Пункты главного меню: (название, endpoint, нужен ли вход)
 MAIN_MENU = [
@@ -30,6 +31,8 @@ def create_app(config_object=Config) -> Flask:
     app.config["EXPORT_DIR"].mkdir(parents=True, exist_ok=True)
 
     db.init_app(app)
+    app.extensions["login_throttle"] = LoginThrottle(
+        app.config["LOGIN_MAX_ATTEMPTS"], app.config["LOGIN_WINDOW_SECONDS"])
     app.before_request(auth.load_user)
     app.before_request(auth.check_csrf)
 

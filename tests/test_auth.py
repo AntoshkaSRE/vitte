@@ -87,3 +87,32 @@ def test_blocked_user_loses_access(client, fresh_db):
                                                 "email": "", "faculty_id": ""})
     response = post(other, "/login", {"login": "rector", "password": USERS["rector"]})
     assert "Неверный логин" in response.get_data(as_text=True)
+
+
+def test_login_throttled_after_failures(client, fresh_db):
+    """После пяти неудачных попыток вход блокируется даже с верным паролем."""
+    for _ in range(5):
+        response = post(client, "/login", {"login": "admin", "password": "wrong"})
+        assert response.status_code == 200
+    blocked = post(client, "/login", {"login": "admin", "password": USERS["admin"]})
+    assert blocked.status_code == 429
+    assert "Слишком много неудачных попыток" in blocked.get_data(as_text=True)
+    assert client.get("/cabinet/").status_code == 302
+
+
+def test_throttle_is_per_login(client, fresh_db):
+    """Блокировка одной учётной записи не мешает входу другой."""
+    for _ in range(5):
+        post(client, "/login", {"login": "admin", "password": "wrong"})
+    assert login(client, "rector").status_code == 302
+
+
+def test_successful_login_resets_counter(client, fresh_db):
+    """Успешный вход обнуляет счётчик неудач."""
+    for _ in range(4):
+        post(client, "/login", {"login": "umu", "password": "wrong"})
+    assert login(client, "umu").status_code == 302
+    post(client, "/logout")
+    for _ in range(4):
+        post(client, "/login", {"login": "umu", "password": "wrong"})
+    assert login(client, "umu").status_code == 302

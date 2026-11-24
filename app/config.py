@@ -32,6 +32,9 @@ class Config:
     SESSION_COOKIE_SECURE = os.environ.get("COOKIE_SECURE", "0") == "1"
     # Сессия действует 8 часов с момента входа
     PERMANENT_SESSION_LIFETIME = timedelta(hours=8)
+    # Защита от подбора пароля: число неудачных попыток и длина окна в секундах
+    LOGIN_MAX_ATTEMPTS = int(os.environ.get("LOGIN_MAX_ATTEMPTS", "5"))
+    LOGIN_WINDOW_SECONDS = int(os.environ.get("LOGIN_WINDOW_SECONDS", "300"))
     # Адрес HTTP-сервиса 1С (пусто — используется файл-эмулятор выгрузки)
     ONEC_URL = os.environ.get("ONEC_URL", "")
     # Время жизни кэша агрегатов в секундах (по ТЗ не более часа)
