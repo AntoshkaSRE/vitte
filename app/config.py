@@ -4,6 +4,7 @@
 поэтому один и тот же код можно запускать локально, в тестах и на хостинге.
 """
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -24,6 +25,13 @@ class Config:
     )
     # Ключ подписи cookie-сессий
     SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
+    # Параметры cookie сессии: недоступны скрипту страницы, не передаются со сторонних сайтов
+    SESSION_COOKIE_HTTPONLY = True
+    SESSION_COOKIE_SAMESITE = "Lax"
+    # На хостинге с HTTPS задаётся COOKIE_SECURE=1, чтобы cookie шла только по защищённому каналу
+    SESSION_COOKIE_SECURE = os.environ.get("COOKIE_SECURE", "0") == "1"
+    # Сессия действует 8 часов с момента входа
+    PERMANENT_SESSION_LIFETIME = timedelta(hours=8)
     # Адрес HTTP-сервиса 1С (пусто — используется файл-эмулятор выгрузки)
     ONEC_URL = os.environ.get("ONEC_URL", "")
     # Время жизни кэша агрегатов в секундах (по ТЗ не более часа)

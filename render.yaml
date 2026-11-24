@@ -18,6 +18,8 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.10
+      - key: COOKIE_SECURE
+        value: "1"
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL

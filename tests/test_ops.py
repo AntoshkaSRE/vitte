@@ -47,3 +47,12 @@ def test_security_headers(client):
         assert headers["X-Frame-Options"] == "DENY"
         assert headers["Referrer-Policy"] == "strict-origin-when-cross-origin"
         assert "camera=()" in headers["Permissions-Policy"]
+
+def test_session_cookie_flags(client):
+    """Cookie сессии после входа имеет HttpOnly и SameSite=Lax, а срок жизни ограничен."""
+    from tests.conftest import login
+    response = login(client, "admin")
+    cookie = response.headers.get("Set-Cookie", "")
+    assert "HttpOnly" in cookie
+    assert "SameSite=Lax" in cookie
+    assert "Expires=" in cookie

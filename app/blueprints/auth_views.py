@@ -26,6 +26,7 @@ def login():
         user = query_one("SELECT * FROM users WHERE login = %s", (login_value,))
         if user and user["is_active"] and check_password_hash(user["password_hash"], password):
             session.clear()
+            session.permanent = True
             session["user_id"] = user["id"]
             execute("UPDATE users SET last_login = NOW() WHERE id = %s", (user["id"],))
             g.user = {"id": user["id"]}
