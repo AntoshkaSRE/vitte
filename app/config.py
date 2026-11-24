@@ -35,6 +35,8 @@ class Config:
     # Защита от подбора пароля: число неудачных попыток и длина окна в секундах
     LOGIN_MAX_ATTEMPTS = int(os.environ.get("LOGIN_MAX_ATTEMPTS", "5"))
     LOGIN_WINDOW_SECONDS = int(os.environ.get("LOGIN_WINDOW_SECONDS", "300"))
+    # Статические файлы кэшируются в браузере на неделю; при смене версии адрес меняется (?v=...)
+    SEND_FILE_MAX_AGE_DEFAULT = timedelta(days=7)
     # Адрес HTTP-сервиса 1С (пусто — используется файл-эмулятор выгрузки)
     ONEC_URL = os.environ.get("ONEC_URL", "")
     # Время жизни кэша агрегатов в секундах (по ТЗ не более часа)

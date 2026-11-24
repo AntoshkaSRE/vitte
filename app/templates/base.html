@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#1f3a5f">
   <title>{% block title %}Витте-Дашборд{% endblock %} — модуль визуализации данных</title>
   <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', v=app_version) }}">
 </head>
 <body>
 <header class="site-header">
@@ -96,7 +96,7 @@
   </div>
   <div class="container copyright">© 2026 Витте-Дашборд. Выпускная квалификационная работа, {{ author_name }}.</div>
 </footer>
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js', v=app_version) }}"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

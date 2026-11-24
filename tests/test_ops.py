@@ -76,3 +76,10 @@ def test_meta_description(client):
 def test_version_in_footer(client):
     """Номер версии выводится в подвале каждой страницы."""
     assert f"Версия {__version__}" in client.get("/").get_data(as_text=True)
+
+def test_static_files_cached_and_versioned(client):
+    """Статика кэшируется на неделю, а в разметке к её адресам добавлена версия (сброс кэша при обновлении)."""
+    response = client.get("/static/css/style.css")
+    assert "max-age=604800" in response.headers["Cache-Control"]
+    html = client.get("/").get_data(as_text=True)
+    assert f"style.css?v={__version__}" in html and f"app.js?v={__version__}" in html
