@@ -28,7 +28,7 @@ Python 3.12, Flask 3.1, PostgreSQL 17 (драйвер psycopg 3), Chart.js 4, op
 
 ```powershell
 # 1. Клонировать репозиторий и создать виртуальное окружение
-git clone https://github.com/AntoshkaSRE/vitte
+git clone https://github.com/AntoshkaSRE/vitte.git
 cd vitte
 python -m venv .venv
 .venv\Scripts\activate              # Linux/macOS: source .venv/bin/activate
