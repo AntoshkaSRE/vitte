@@ -39,6 +39,15 @@ def create_app(config_object=Config) -> Flask:
     for module in (public, auth_views, dashboards, api, reports, cabinet, admin, ops):
         app.register_blueprint(module.bp)
 
+    @app.after_request
+    def add_security_headers(response):
+        """Защитные заголовки: запрет подмены типа файла, встраивания в чужие страницы и т.п."""
+        response.headers.setdefault("X-Content-Type-Options", "nosniff")
+        response.headers.setdefault("X-Frame-Options", "DENY")
+        response.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
+        response.headers.setdefault("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+        return response
+
     @app.context_processor
     def inject_globals():
         """Переменные, доступные во всех шаблонах."""

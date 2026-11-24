@@ -38,3 +38,12 @@ def test_sitemap_xml(client):
     assert "<loc>http://localhost/faculties/FIT</loc>" in text
     assert "<loc>http://localhost/news/1</loc>" in text
     assert "/admin/" not in text
+
+def test_security_headers(client):
+    """Каждый ответ содержит защитные заголовки."""
+    for url in ("/", "/login", "/healthz", "/no-such-page"):
+        headers = client.get(url).headers
+        assert headers["X-Content-Type-Options"] == "nosniff"
+        assert headers["X-Frame-Options"] == "DENY"
+        assert headers["Referrer-Policy"] == "strict-origin-when-cross-origin"
+        assert "camera=()" in headers["Permissions-Policy"]
