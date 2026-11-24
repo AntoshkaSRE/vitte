@@ -1,7 +1,7 @@
 """Служебные адреса: проверка работоспособности, robots.txt и sitemap.xml."""
 from xml.sax.saxutils import escape
 
-from flask import Blueprint, Response, jsonify, url_for
+from flask import Blueprint, Response, jsonify, redirect, url_for
 
 from app.db import query_all, query_one
 
@@ -11,6 +11,12 @@ bp = Blueprint("ops", __name__)
 STATIC_PAGES = ("public.index", "public.about", "public.features", "public.indicators",
                 "public.faculties", "public.directions", "public.open_stats", "public.news_list",
                 "public.faq", "public.docs", "public.contacts", "public.sitemap")
+
+
+@bp.route("/favicon.ico")
+def favicon():
+    """Браузеры запрашивают /favicon.ico автоматически: перенаправляем на значок сайта в формате SVG."""
+    return redirect(url_for("static", filename="favicon.svg"), code=301)
 
 
 @bp.route("/robots.txt")

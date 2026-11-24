@@ -56,3 +56,11 @@ def test_session_cookie_flags(client):
     assert "HttpOnly" in cookie
     assert "SameSite=Lax" in cookie
     assert "Expires=" in cookie
+
+def test_favicon_linked_and_served(client):
+    """Значок сайта подключён в шапке страницы и отдаётся по адресам /favicon.ico и /static/favicon.svg."""
+    assert 'rel="icon"' in client.get("/").get_data(as_text=True)
+    redirect = client.get("/favicon.ico")
+    assert redirect.status_code == 301 and redirect.headers["Location"].endswith("/static/favicon.svg")
+    svg = client.get("/static/favicon.svg")
+    assert svg.status_code == 200 and svg.mimetype == "image/svg+xml"
