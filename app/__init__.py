@@ -34,9 +34,9 @@ def create_app(config_object=Config) -> Flask:
     app.before_request(auth.check_csrf)
 
     # Blueprint-ы импортируются здесь, чтобы избежать циклических импортов
-    from app.blueprints import admin, api, auth_views, cabinet, dashboards, public, reports
+    from app.blueprints import admin, api, auth_views, cabinet, dashboards, ops, public, reports
 
-    for module in (public, auth_views, dashboards, api, reports, cabinet, admin):
+    for module in (public, auth_views, dashboards, api, reports, cabinet, admin, ops):
         app.register_blueprint(module.bp)
 
     @app.context_processor
