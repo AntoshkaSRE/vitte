@@ -1,13 +1,15 @@
 """Панель администратора (доступна только роли «Администратор»)."""
+from datetime import datetime
+
 import psycopg
-from flask import Blueprint, abort, flash, g, redirect, request, url_for
+from flask import Blueprint, Response, abort, flash, g, redirect, request, url_for
 from werkzeug.security import generate_password_hash
 
 from app.auth import ROLE_ADMIN, audit, role_required
 from app.db import execute, query_all, query_one
 from app.helpers import page, to_int
 from app.passwords import check_strength
-from app.services import onec
+from app.services import exporter, onec
 from app.services.cache import clear_cache
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
@@ -244,14 +246,34 @@ def integration():
                 settings=settings, log=log)
 
 
+def audit_rows(action: str, limit: int):
+    """Записи журнала аудита (новые первыми) с необязательным фильтром по действию."""
+    return query_all("""SELECT a.*, u.login FROM audit_log a LEFT JOIN users u ON u.id = a.user_id
+                         WHERE (%s = '' OR a.action = %s) ORDER BY a.created_at DESC LIMIT %s""",
+                     (action, action, limit))
+
+
+@bp.route("/audit.csv")
+@role_required(ROLE_ADMIN)
+def audit_csv():
+    """Выгрузка журнала аудита в CSV (до 5000 записей) с учётом выбранного фильтра."""
+    action = request.args.get("action", "")
+    rows = audit_rows(action, 5000)
+    content = exporter.to_csv(
+        ["Время", "Пользователь", "Действие", "Подробности", "IP"],
+        [[a["created_at"].strftime("%d.%m.%Y %H:%M:%S"), exporter.csv_safe(a["login"] or ""),
+          exporter.csv_safe(a["action"]), exporter.csv_safe(a["details"]), a["ip_address"]] for a in rows])
+    audit("audit_export", f"Выгрузка журнала аудита ({len(rows)} записей)")
+    return Response(content, mimetype="text/csv; charset=utf-8",
+                    headers={"Content-Disposition": f"attachment; filename=audit_{datetime.now():%Y%m%d_%H%M%S}.csv"})
+
+
 @bp.route("/audit")
 @role_required(ROLE_ADMIN)
 def audit_log():
     """Журнал аудита с фильтром по действию."""
     action = request.args.get("action", "")
-    rows = query_all("""SELECT a.*, u.login FROM audit_log a LEFT JOIN users u ON u.id = a.user_id
-                         WHERE (%s = '' OR a.action = %s) ORDER BY a.created_at DESC LIMIT 200""",
-                     (action, action))
+    rows = audit_rows(action, 200)
     actions = query_all("SELECT DISTINCT action FROM audit_log ORDER BY action")
     return page("admin/audit.html", crumbs=[CRUMB_ROOT, ("Журнал аудита", None)], rows=rows,
                 actions=actions, selected=action)

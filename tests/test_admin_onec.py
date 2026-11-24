@@ -140,3 +140,18 @@ def test_admin_new_user_rejects_password_equal_to_login(as_admin):
             "faculty_id": "", "password": "same_login1"}
     html = post(as_admin, "/admin/users/new", data).get_data(as_text=True)
     assert "не должен совпадать с логином" in html
+
+def test_audit_csv_export(as_admin, fresh_db):
+    """Администратор скачивает журнал аудита в CSV; фильтр по действию учитывается."""
+    response = as_admin.get("/admin/audit.csv?action=login")
+    assert response.status_code == 200
+    assert response.mimetype == "text/csv"
+    assert "attachment" in response.headers["Content-Disposition"]
+    lines = response.get_data(as_text=True).lstrip("\ufeff").splitlines()
+    assert lines[0] == "Время;Пользователь;Действие;Подробности;IP"
+    assert len(lines) >= 2 and all(";login;" in line for line in lines[1:])
+
+
+def test_audit_csv_forbidden_for_dean(as_dean):
+    """Декан не имеет доступа к выгрузке журнала аудита."""
+    assert as_dean.get("/admin/audit.csv").status_code == 403
