@@ -83,3 +83,10 @@ def test_static_files_cached_and_versioned(client):
     assert "max-age=604800" in response.headers["Cache-Control"]
     html = client.get("/").get_data(as_text=True)
     assert f"style.css?v={__version__}" in html and f"app.js?v={__version__}" in html
+
+def test_print_stylesheet_present(client):
+    """В таблице стилей одно правило печати: навигация, формы и панели инструментов скрываются."""
+    css = client.get("/static/css/style.css").get_data(as_text=True)
+    assert css.count("@media print") == 1
+    printed = css.split("@media print")[1]
+    assert ".main-nav" in printed and "form" in printed and ".tools" in printed
