@@ -102,3 +102,11 @@ def to_csv(headers: list, rows: list) -> bytes:
     writer.writerow(headers)
     writer.writerows(rows)
     return ("\ufeff" + buffer.getvalue()).encode("utf-8")
+
+
+def csv_safe(value):
+    """Защита от внедрения формул (CSV injection): текст, начинающийся с «=», «+», «-» или «@»,
+    получает впереди апостроф, чтобы Excel не выполнял его как формулу. Нестроковые значения не меняются."""
+    if isinstance(value, str) and value[:1] in ("=", "+", "-", "@", "\t", "\r"):
+        return "'" + value
+    return value
